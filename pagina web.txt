@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicción a las Redes Sociales</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 0;
+            transition: background 0.5s, color 0.5s;
+        }
+        header {
+            background-color: #6a11cb;
+            background-image: linear-gradient(315deg, #6a11cb 0%, #2575fc 74%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        section {
+            padding: 30px;
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        p, li {
+            color: #555;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        button {
+            display: block;
+            margin: 30px auto 0;
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #1a5edb;
+        }
+        #contador {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        .dark-mode {
+            background: #121212;
+            color: #e0e0e0;
+        }
+        .dark-mode section {
+            background: #1e1e1e;
+        }
+        .dark-mode header {
+            background: linear-gradient(315deg, #0f0c29 0%, #302b63 74%);
+        }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+        .galeria img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .galeria img:hover {
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>El Impacto de las Redes Sociales en los Jóvenes</h1>
+</header>
+
+<section>
+    <h2>¿Qué está pasando?</h2>
+    <p>Hoy en día, la mayoría de los jóvenes pasan más de 4 horas al día en redes sociales como Instagram, TikTok y Snapchat. Esto afecta su concentración, autoestima y bienestar emocional.</p>
+
+    <h2>Problemas comunes</h2>
+    <ul>
+        <li>Ansiedad y depresión</li>
+        <li>Adicción al contenido inmediato</li>
+        <li>Baja autoestima por comparaciones sociales</li>
+        <li>Falta de sueño</li>
+        <li>Dificultad para concentrarse</li>
+    </ul>
+
+    <h2>¿Qué podemos hacer?</h2>
+    <p>Es importante establecer límites de tiempo, buscar actividades offline y recordar que las redes muestran solo una parte de la realidad. Cuidar nuestra salud mental es una prioridad.</p>
+
+    <div id="contador">
+        Tiempo perdido en redes sociales hoy: <span id="tiempo">0</span> minutos
+    </div>
+
+    <button onclick="reducirTiempo()">¡Quiero reducir mi tiempo!</button>
+    <button onclick="toggleDarkMode()">🌙 Modo Oscuro / ☀️ Modo Claro</button>
+
+    <h2 style="margin-top:40px;">Imágenes que reflejan esta realidad:</h2>
+    <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1556742400-b5fddac29b30" alt="Jóvenes en el móvil">
+        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b" alt="Adicción redes">
+        <img src="https://images.unsplash.com/photo-1581091870620-8b5d65be91f6" alt="Comparación social">
+        <img src="https://images.unsplash.com/photo-1522120692671-5fd4b1c34c97" alt="Tiempo perdido en redes">
+    </div>
+</section>
+
+<footer>
+    Creado para concienciar a la nueva generación 🌍
+</footer>
+
+<script>
+    // Simula el tiempo perdido automáticamente
+    let tiempo = 0;
+    setInterval(() => {
+        tiempo++;
+        document.getElementById('tiempo').innerText = tiempo;
+    }, 3000); // Cada 3 segundos suma 1 minuto ficticio
+
+    // Acción del botón
+    function reducirTiempo() {
+        alert("¡Genial decisión! Empieza estableciendo límites de tiempo en tus apps favoritas. 🌟");
+    }
+
+    // Modo oscuro
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
+
+</body>
+</html>
